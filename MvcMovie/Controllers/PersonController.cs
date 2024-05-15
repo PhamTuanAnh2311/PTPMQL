@@ -1,3 +1,4 @@
+using System.IO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -202,5 +203,25 @@ namespace MvcMovie.Controllers
         {
             return _context.Person.Any(e => e.PersonId == id);
         }
+        public IActionResult Download()
+        {
+            //Name the file when downloading
+            var fileName = "YourFileName" + ".xlsx";
+            using(ExcelPackage excelPackage = new ExcelPackage())
+            {
+                ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Sheet 1");
+                //add some text to cell A1
+                worksheet.Cells["A1"].Value = "PersonID";
+                worksheet.Cells["B1"].Value = "FullName";
+                worksheet.Cells["C1"].Value = "Address";
+                //get all Person
+                var personList = _context.Person.ToList();
+                //fill data to worksheet
+                worksheet.Cells["A2"].LoadFromCollection(personList);
+                var stream = new MemoryStream(excelPackage.GetAsByteArray());
+                //download file
+                return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
+            }
+        } 
     }
 }
