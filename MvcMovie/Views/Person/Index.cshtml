@@ -1,6 +1,4 @@
-@model IEnumerable<MvcMovie.Model.Person>
-@using X.PagedList;
-@using X.PageList.Mvc.Core;
+@model IEnumerable<MvcMovie.Models.Person>
 
 @{
     ViewData["Title"] = "Index";
@@ -10,7 +8,6 @@
 
 <p>
     <a asp-action="Create">Create New</a>
-    <a class="btn btn-success" asp-action="Dowload">Dowload</a>
 </p>
 <table class="table">
     <thead>
@@ -26,7 +23,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-    <tr>
+        <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.FullName)
             </td>
@@ -34,31 +31,11 @@
                 @Html.DisplayFor(modelItem => item.Address)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item. PersonId">Edit</a> |
+                <a asp-action="Edit" asp-route-id="@item.PersonId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PersonId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.PersonId">Delete</a>
             </td>
         </tr>
-}        
+}
     </tbody>
 </table>
-@using (Html.BeginForm("Index", "Person", FormMethod.Get, new { id = "form1" }))
-{
-    <div class="row">
-        <div class="col-md-11">
-            @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new {page = page,
-                pageSize = ViewBag.psize});
-                new X.PagedList.Mvc.Common.PagedListRenderOptions { LiElementClasses = new string[] { "page-item" },
-                PageClasses = new string[] { "page-link" }})
-            <div class="col-md-11">
-                  @Html.DropDownList("pageSize", null, new {@class="form-select"})
-            </div>
-        </div>
-}
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $("#pageSize").change(function() {
-            $("#form1").submit();
-        });
-    });
-</script>
