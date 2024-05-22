@@ -280,3 +280,6 @@ D:\PTPMQL\MvcMovie\obj\Debug\net8.0\refint\MvcMovie.dll
 D:\PTPMQL\MvcMovie\obj\Debug\net8.0\MvcMovie.pdb
 D:\PTPMQL\MvcMovie\obj\Debug\net8.0\MvcMovie.genruntimeconfig.cache
 D:\PTPMQL\MvcMovie\obj\Debug\net8.0\ref\MvcMovie.dll
+D:\PTPMQL\MvcMovie\obj\Debug\net8.0\MvcMovie.MvcApplicationPartsAssemblyInfo.cs
+D:\PTPMQL\MvcMovie\bin\Debug\net8.0\X.PagedList.dll
+D:\PTPMQL\MvcMovie\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll

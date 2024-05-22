@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vmyNxxi/+2y4roDZ00r7Yw5goTWm1tN9CiwHYk0jSV5vC6n/pK1t67nm+LYVRBnivBbys94pKw0tWTb11BEdcg==",
+  "dgSpecHash": "ziZzAc6f4Bgs1xViky/qS0EIEufDkJ0e+IXdok+rrv1hVwx063S8398Gn6xvONHA7+jqDwSPTTmf9Jpgr3z6eg==",
   "success": true,
   "projectFilePath": "D:\\PTPMQL\\MvcMovie\\MvcMovie.csproj",
   "expectedPackageFiles": [
@@ -180,7 +180,9 @@
     "C:\\Users\\jeept\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\jeept\\.nuget\\packages\\system.threading.tasks.dataflow\\7.0.0\\system.threading.tasks.dataflow.7.0.0.nupkg.sha512",
     "C:\\Users\\jeept\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\jeept\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+    "C:\\Users\\jeept\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512",
+    "C:\\Users\\jeept\\.nuget\\packages\\x.pagedlist\\9.1.2\\x.pagedlist.9.1.2.nupkg.sha512",
+    "C:\\Users\\jeept\\.nuget\\packages\\x.pagedlist.mvc.core\\9.1.2\\x.pagedlist.mvc.core.9.1.2.nupkg.sha512"
   ],
   "logs": []
 }
